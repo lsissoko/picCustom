@@ -15,11 +15,10 @@ import shutil
 import urllib
 
 def getLocalPics(basedir):
-	
 	# Settings
 	# - fixed image name format = (newString + delim + count + typeOut)
 	newString = "new_image"	# fixed image base string
-	delim = " - "			# chars between end of newString and start of image number
+	delim = " - "			# delimiter between newString and count
 	count = 1				# image number
 	pad = 2 				# image number padding, ex: pad = 4 -> img0001, img0002, ...
 	typeIn = ".jpg" 		# filetype of images to fix
@@ -32,7 +31,7 @@ def getLocalPics(basedir):
 	for name in dirContents:
 		match = re.search(r'.+(\.\w+)', name)
 		if match and match.group(1) == typeIn:
-			fixedName = newString + ' - ' + format(count, "0%dd" % pad) + typeOut
+			fixedName = newString + delim + format(count, "0%dd" % pad) + typeOut
 			shutil.copy2(basedir + "\\" + name, destDir + "\\" + fixedName)
 			print "  " + str(count) + ") " + fixedName
 			count += 1
