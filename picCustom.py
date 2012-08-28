@@ -20,7 +20,7 @@ def getLocalPics(basedir):
 	newString = "new_image"	# fixed image base string
 	delim = " - "			# delimiter between newString and count
 	count = 1				# image number
-	pad = 2 				# image number padding, ex: pad = 4 -> img0001, img0002, ...
+	pad = 2					# image number padding, ex: pad = 4 -> img0001, img0002, ...
 	typeIn = ".jpg" 		# filetype of images to fix
 	typeOut = ".jpg" 		# filetype of fixed images
 	
