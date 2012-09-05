@@ -14,7 +14,7 @@ import re
 import shutil
 import urllib
 
-def getLocalPics(basedir):
+def renamePics(basedir):
 	# Settings
 	# - fixed image name = (newString + delim + count + typeOut)
 	newString = "new_image"			# fixed image base string
@@ -48,4 +48,4 @@ def createFolder(basedir):
 
 if __name__ == "__main__":
 	picDir = "C:\pic_customizer"	# directory containing the images to rename
-	getLocalPics(picDir)
+	renamePics(picDir)
