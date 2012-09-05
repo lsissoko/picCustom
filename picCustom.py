@@ -17,7 +17,7 @@ import urllib
 def getLocalPics(basedir):
 	# Settings
 	# - fixed image name = (newString + delim + count + typeOut)
-	newString = "new_image"		# fixed image base string
+	newString = "new_image"			# fixed image base string
 	delim = ""				# delimiter
 	count = 1				# image number
 	pad = 2					# image number's zero padding
