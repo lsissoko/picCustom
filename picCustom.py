@@ -17,12 +17,12 @@ import urllib
 def getLocalPics(basedir):
 	# Settings
 	# - fixed image name = (newString + delim + count + typeOut)
-	newString = "new_image"	# fixed image base string
+	newString = "new_image"		# fixed image base string
 	delim = ""				# delimiter
 	count = 1				# image number
 	pad = 2					# image number's zero padding
-	typeIn = ".jpg" 		# filetype of images to fix
-	typeOut = ".jpg" 		# filetype of fixed images
+	typeIn = ".jpg" 			# filetype of images to fix
+	typeOut = ".jpg" 			# filetype of fixed images
 	
 	# Work
 	destDir = createFolder(basedir)
