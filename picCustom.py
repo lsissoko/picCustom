@@ -1,6 +1,7 @@
 '''
 This Python script that allows you to quickly rename a large set of
-images contained in the same directory.
+files contained in the same directory. I wrote this with concert and
+event pictures in mind but one could use this for any filetype.
 
 Example:
 - The images "asdf.jpg", "893t.jpg", etc... are in your directory.
