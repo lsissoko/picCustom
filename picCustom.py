@@ -1,14 +1,3 @@
-'''
-This Python script that allows you to quickly rename a large set of
-files contained in the same directory. I wrote this with concert and
-event pictures in mind but one could use this for any filetype.
-
-Example:
-- The images "asdf.jpg", "893t.jpg", etc... are in your directory.
-- They are all images taken at the same concert.
-- You can use this script to rename them "my_concert - 001.jpg",
-"my_concert - 002.jpg", "my_concert - 003.jpg", etc...
-'''
 
 import os
 import re
@@ -16,15 +5,14 @@ import shutil
 import urllib
 
 def renamePics(basedir):
-	# Settings
-	# - fixed image name = (newString + delim + count + typeOut)
+	# Settings ( fixed image name = (newString + delim + count + typeOut) )
 	newString = "new_image"			# fixed image base string
 	delim = ""				# delimiter
-	count = 1				# image number
-	pad = 2					# image number's zero padding
+	count = 1				# starting number for fixed images
+	pad = 2					# zero padding for fixed image numbers
 	typeIn = ".jpg" 			# filetype of images to fix
 	typeOut = ".jpg" 			# filetype of fixed images
-	
+		
 	# Work
 	destDir = createFolder(basedir)
 	dirContents = os.listdir(basedir)
@@ -43,10 +31,9 @@ def createFolder(basedir):
 	fixedDir = basedir + "\\fixed pics"
 	if not os.path.isdir(fixedDir):
 		os.mkdir(fixedDir)
-		print "\nCREATING FOLDER TO STORE FIXED PICTURES:\n  %s\n" % fixedDir
+	print "\nCREATING FOLDER TO STORE FIXED PICTURES:\n  %s\n" % fixedDir
 	return fixedDir
 
 
 if __name__ == "__main__":
-	picDir = "C:\pic_customizer"	# directory containing the images to rename
-	renamePics(picDir)
+	renamePics("C:\pic_customizer")  # sub your own directory containing images to rename
