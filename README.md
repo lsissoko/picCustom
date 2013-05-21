@@ -1,9 +1,7 @@
 picCustom
 =========
 
-Python script that allows you to quickly copy and rename a large set of images.
-
-I wrote this with concert and event pictures in mind but it would work for other filetypes.
+Python script that allows you to quickly copy and rename a large set of images (e.g. concert or event photos).
 
 #####Settings
 - The `typeIn` variable lets you limit the target files to a single filetype
