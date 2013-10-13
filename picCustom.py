@@ -1,4 +1,3 @@
-
 import os
 import re
 import shutil
@@ -10,7 +9,7 @@ def renamePics(basedir):
 	delim = ""				# delimiter
 	count = 1				# starting number for fixed images
 	pad = 2					# zero padding for fixed image numbers
-	typeIn = ".jpg" 			# filetype of images to fix
+	typeIn = [".jpg", ".png"] 		# filetype(s) of images to fix
 	typeOut = ".jpg" 			# filetype of fixed images
 		
 	# Work
@@ -18,8 +17,9 @@ def renamePics(basedir):
 	dirContents = os.listdir(basedir)
 	print "\nADDING NEW PICTURES:\n",
 	for name in dirContents:
-		match = re.search(r'.+(\.\w+)', name)
-		if match and match.group(1) == typeIn:
+		imageMatch = re.search(r'.+(\.\w+)', name)
+		fileTypeMatch = (imageMatch.group(1).lower() in typeIn) if imageMatch else False
+		if imageMatch and fileTypeMatch:
 			fixedName = newString + delim + format(count, "0%dd" % pad) + typeOut
 			shutil.copy2(basedir + "\\" + name, destDir + "\\" + fixedName)
 			print "  " + str(count) + ") " + fixedName
