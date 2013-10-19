@@ -9,13 +9,13 @@ Python script that allows you to quickly copy and rename a large set of images (
 
 #####Example
 ```
-newString = "abcd"  # fixed image base string
-delim = "_"         # delimiter
-count = 20          # starting number for fixed images
-pad = 2             # zero padding for fixed image numbers
-typeIn = ".jpg"     # filetype of images to fix
-typeOut = ".jpg"    # filetype of fixed images
+newString = "abcd"          # fixed image base string
+delim = "_"                 # delimiter
+count = 20                  # starting number for fixed images
+pad = 2                     # zero padding for fixed image numbers
+typeIn = [".jpg", ".png"]   # filetype of images to fix
+typeOut = ".jpg"            # filetype of fixed images
 ```
 
-The settings above turn ["IMG001.jpg", "IMG002.png", "IMG003.jpg"] into ["abcd_20.jpg", "abcd_21.jpg"].
-- Note that `typeIn = ".jpg"` kept the second image, a ".png" file, from being renamed.
+The settings above turn ["IMG001.jpg", "IMG002.gif", "IMG003.jpg"] into ["abcd_20.jpg", "abcd_21.jpg"].
+- Note that `typeIn = [".jpg", ".png"]` kept the second image, a `.gif` file, from being renamed.
